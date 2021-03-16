@@ -14,6 +14,7 @@ class Car {
     let yearMaking: Int
     var windowState: WindowState
     var engineState: EngineState
+    let color: (String)? = nil
     
     init(marka: String, model: String, yearMaking: Int, windowState: WindowState, engineState: EngineState){
         self.marka = marka
@@ -65,6 +66,7 @@ class Honda: Car {
         self.turbo = turbo
         super.init(marka: marka, model: model, yearMaking: yearMaking, windowState: windowState, engineState: engineState)
     }
+    
     func openRoof() {
         hingerRoof = .open
     }
@@ -143,6 +145,7 @@ print ("Полный привод: \(truckCar1.drive4x4)")
 
 var honda1 = Honda(marka: "Honda", model: "DelSol", yearMaking: 1994, windowState: .close, engineState: .stop, hingerRoof: .close, engine: .d16, turbo: .no)
 
+print("---------")
 honda1.printInfo()
 print("---------")
 print("Пора свапнуть мотор на что-нибудь помощнее и поставить турбину")
